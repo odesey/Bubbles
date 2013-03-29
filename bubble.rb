@@ -1,53 +1,20 @@
 puts "Original Array[10, 9, 1, 2, 4, 6] "
 to_sort = [10, 9, 1, 2, 4, 6] 
 
+cycle = 1 #variable counter for the outer loop
 
+while cycle > 0 do #we only need to go through the outter loop once, we will stop once we have executed it once
+	 x = 0 #variable for the elements in the array
+		while (x < to_sort.length - 1) do #get the amount of elements in the array and iterate through them
+			if to_sort[x] > to_sort[x+1] #compare if the 2 selected values are in order
+		
+				to_sort[x], to_sort[x+1] = to_sort[x+1], to_sort[x] #if the 1st value is greater than the 2nd value then swap values
 
-cycle = 1
-
-while cycle > 0 do
-x = 0 #variable for the elements in the array
-while (x < to_sort.length - 1) do
-	if to_sort[x] > to_sort[x+1]
-	
-	to_sort[x], to_sort[x+1] = to_sort[x+1], to_sort[x]
-
-	# to_sort[i+1] = to_sort[i]
-	# to_sort[i] = x 
-	cycle += 1
-
-	puts "**********RESORT**************"
-	puts to_sort.join ','
-else 
-end 
-x +=1
+				puts "**********RESORT**************" #puts some feedback on the screen
+				puts to_sort.join ',' #puts all the values of the array on one line instead of 1 per line 
+				else 
+			end 
+		x +=1
 	end
-cycle -= 1
+cycle -= 1 #decrease the outter counter value so that we only go through the outter loop once
 end
-
-
-
-# to_sort[0][1]
-# one = to_sort[0] 
-# two = to_sort[1] 
-# three = to_sort[2] 
-# four = to_sort[3] 
-# five = to_sort[4] 
-
-# # # two = to_sort[1]
-# if 	to_sort[0] > to_sort[1]
-# 	to_sort[0], to_sort[1] = to_sort[1], to_sort[0]
-# 	# to_sort << one
-# 	# puts to_sort.join ','
-# 	else
-# 	to_sort[1] > to_sort[2]
-# 	to_sort.shift
-# 	to_sort << two
-
-# 	puts to_sort.join ','
-# 	puts "**********RESORT**************"
-# end
-# puts "**********RESORT**************"
-# puts to_sort.join ','
-
-
